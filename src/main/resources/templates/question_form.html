@@ -1,15 +1,15 @@
 <html layout:decorate="~{layout}">
 <div layout:fragment="content" class="container">
-    <h5 class="my-3 border-bottom pb-2">질문등록</h5>
+    <h5 class="my-3 border-bottom pb-2">add a question</h5>
     <form th:action="@{/question/create}" th:object="${questionForm}" method="post">
                 <div th:replace="form_errors :: formErrorsFragment"></div>
 
         <div class="mb-3">
-            <label for="subject" class="form-label">제목</label>
+            <label for="subject" class="form-label">subject</label>
             <input type="text" name="subject" th:field="*{subject}" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="content" class="form-label">내용</label>
+            <label for="content" class="form-label">content</label>
             <textarea name="content" class="form-control" th:field="*{content}" rows="10"></textarea>
         </div>
         <input type="submit" value="저장하기" class="btn btn-primary my-2">
