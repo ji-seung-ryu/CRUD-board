@@ -6,11 +6,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import com.mysite.sbb.user.SiteUser;
+
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import org.springframework.data.domain.Sort;
 import java.util.Optional;
 import com.mysite.sbb.DataNotFoundException;
-import java.time.LocalDateTime;
 
 import lombok.RequiredArgsConstructor;
 
@@ -40,11 +43,13 @@ public class QuestionService {
 		}
 	}
 
-	public void create(String subject, String content) {
+	public void create(String subject, String content, SiteUser user) {
 		Question question = new Question();
 		question.setSubject(subject);
 		question.setContent(content);
 		question.setCreateDate(LocalDateTime.now());
+        question.setAuthor(user);
+
 		this.questionRepository.save(question);
 
 	}

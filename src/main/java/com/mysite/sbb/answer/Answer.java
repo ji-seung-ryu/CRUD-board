@@ -2,6 +2,7 @@ package com.mysite.sbb.answer;
 
 import java.time.LocalDateTime;
 
+import com.mysite.sbb.user.SiteUser;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,4 +30,8 @@ public class Answer {
 
     @ManyToOne
     private Question question;
+    
+    @ManyToOne
+    private SiteUser author;
+    
 }

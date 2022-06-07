@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lagn="ko">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,17 +8,15 @@
     <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
     <!-- sbb CSS -->
     <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
-    <!-- Bootstrap JS -->
-	<script th:src="@{/bootstrap.min.js}"></script>
     <title>Hello, sbb!</title>
 </head>
 <body>
-
-<!-- ³×ºñ°ÔÀÌ¼Ç¹Ù -->
+<!-- ë„¤ë¹„ê²Œì´ì…˜ë°” -->
 <nav th:replace="navbar :: navbarFragment"></nav>
-
-<!-- ±âº» ÅÛÇÃ¸´ ¾È¿¡ »ðÀÔµÉ ³»¿ë Start -->
+<!-- ê¸°ë³¸ í…œí”Œë¦¿ ì•ˆì— ì‚½ìž…ë  ë‚´ìš© Start -->
 <th:block layout:fragment="content"></th:block>
-<!-- ±âº» ÅÛÇÃ¸´ ¾È¿¡ »ðÀÔµÉ ³»¿ë End -->
+<!-- ê¸°ë³¸ í…œí”Œë¦¿ ì•ˆì— ì‚½ìž…ë  ë‚´ìš© End -->
+<!-- Bootstrap JS -->
+<script th:src="@{/bootstrap.min.js}"></script>
 </body>
 </html>

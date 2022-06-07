@@ -1,4 +1,4 @@
-package com.mysite.sbb.siteuser;
+package com.mysite.sbb.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,15 +13,16 @@ import lombok.Setter;
 @Setter
 @Entity
 public class SiteUser {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-	
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @Column(unique = true)
-	private String identity;
-	
-	private String password;
-	
-	@Column(unique = true)
-	private String email;
+    private String username;
+
+    private String password;
+
+    @Column(unique = true)
+    private String email;
 }

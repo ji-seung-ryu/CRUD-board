@@ -1,4 +1,4 @@
-package com.mysite.sbb.siteuser;
+package com.mysite.sbb.user;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -9,10 +9,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SiteUserForm {
+public class UserCreateForm {
     @Size(min = 3, max = 25)
     @NotEmpty(message = "사용자ID는 필수항목입니다.")
-    private String identity;
+    private String username;
 
     @NotEmpty(message = "비밀번호는 필수항목입니다.")
     private String password1;
